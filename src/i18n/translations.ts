@@ -96,6 +96,7 @@ export const UI_COPY: Record<Language, Record<string, string>> = {
     i2cConflictLabel: 'تعارض عنوان!',
     cancel: 'إلغاء',
     createPart: 'حفظ المكون',
+    downloadSourceZip: 'تحميل المشروع (.zip)',
   },
   en: {
     navDashboard: 'Dashboard',
@@ -169,5 +170,6 @@ export const UI_COPY: Record<Language, Record<string, string>> = {
     i2cConflictLabel: 'Address Collision',
     cancel: 'Cancel',
     createPart: 'Add Component',
+    downloadSourceZip: 'Download Source (.zip)',
   },
 };

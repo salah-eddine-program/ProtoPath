@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ExternalLink, Globe, RotateCcw } from 'lucide-react';
+import { Download, ExternalLink, Globe, RotateCcw } from 'lucide-react';
 import type {
   BomStatus,
   CatalogComponent,
@@ -334,16 +334,31 @@ export default function App() {
       <footer className="border-t border-slate-400/12 bg-[#0f172a]/80">
         <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 px-4 py-3 text-xs text-[#94a3b8] sm:px-6">
           <span>ProtoPath</span>
-          <a
-            href="https://salah-eddine-program.github.io/bt-salahdine.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#bcc9cd] transition-colors hover:text-[#4cd7f6] focus-visible:outline-2 focus-visible:outline-[#4cd7f6] rounded"
-          >
-            <Globe className="h-3.5 w-3.5 text-[#4cd7f6]" aria-hidden="true" />
-            <span className="tabular-ltr">bt-salahdine.com</span>
-            <ExternalLink className="h-3 w-3 opacity-75" aria-hidden="true" />
-          </a>
+          <div className="flex flex-wrap items-center gap-5">
+            {(typeof window !== 'undefined' &&
+              (window.location.hostname === 'localhost' ||
+                window.location.hostname === '127.0.0.1' ||
+                window.location.hostname.endsWith('.run.app'))) && (
+              <a
+                href="/protopath-github.zip"
+                download="protopath-github.zip"
+                className="inline-flex items-center gap-1.5 text-[#bcc9cd] transition-colors hover:text-[#4cd7f6] focus-visible:outline-2 focus-visible:outline-[#4cd7f6] rounded"
+              >
+                <Download className="h-3.5 w-3.5 text-[#4cd7f6]" aria-hidden="true" />
+                <span>{t.downloadSourceZip}</span>
+              </a>
+            )}
+            <a
+              href="https://salah-eddine-program.github.io/bt-salahdine.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#bcc9cd] transition-colors hover:text-[#4cd7f6] focus-visible:outline-2 focus-visible:outline-[#4cd7f6] rounded"
+            >
+              <Globe className="h-3.5 w-3.5 text-[#4cd7f6]" aria-hidden="true" />
+              <span className="tabular-ltr">bt-salahdine.com</span>
+              <ExternalLink className="h-3 w-3 opacity-75" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </footer>
 
