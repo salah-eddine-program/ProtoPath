@@ -1,0 +1,8 @@
+{
+  "name": "ProtoPath — Hardware Engineering Workbench",
+  "description": "Embedded hardware prototyping workbench with ESP32 interactive pin planner, electrical engineering calculators, and component BOM manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
